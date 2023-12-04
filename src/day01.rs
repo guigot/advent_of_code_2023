@@ -11,7 +11,7 @@ pub fn main() {
 
     let array: Vec<String> = input.lines().map(String::from).collect();
     for line in array {
-        let (mut f_begin_index, mut f_end_index) = (line.len(), 0);
+        let (mut f_begin_index, mut f_end_index) = (line.len() - 1, 0);
         let (mut l_begin_index, mut l_end_index) = (0, 0);
         for digit in digits {
             if let Some(i) = line.find(digit) {
